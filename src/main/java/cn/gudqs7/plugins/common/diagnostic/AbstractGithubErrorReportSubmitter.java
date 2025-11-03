@@ -1,8 +1,8 @@
 package cn.gudqs7.plugins.common.diagnostic;
 
 import cn.gudqs7.plugins.common.consts.CommonConst;
+import cn.gudqs7.plugins.common.util.HttpUtil;
 import cn.gudqs7.plugins.common.util.JsonUtil;
-import cn.gudqs7.plugins.common.util.api.HttpUtil;
 import lombok.SneakyThrows;
 import org.apache.commons.codec.net.URLCodec;
 import org.apache.commons.collections.CollectionUtils;

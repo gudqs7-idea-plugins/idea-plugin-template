@@ -1,6 +1,5 @@
 package cn.gudqs7.plugins.common.util;
 
-import cn.gudqs7.plugins.common.consts.CommonConst;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateExceptionHandler;
