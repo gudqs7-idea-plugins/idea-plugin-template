@@ -2,6 +2,9 @@ package cn.gudqs7.plugins.common.util.jetbrain;
 
 import com.intellij.notification.*;
 
+import static cn.gudqs7.plugins.consts.CommonIdConst.NOTIFICATION_ERROR_GROUP_ID;
+import static cn.gudqs7.plugins.consts.CommonIdConst.NOTIFICATION_TIP_GROUP_ID;
+
 /**
  * 通知提示工具类
  *
@@ -9,9 +12,6 @@ import com.intellij.notification.*;
  * @date 2022/6/2
  */
 public class NotificationUtil {
-
-    private static final String NOTIFICATION_TIP_GROUP_ID = "Search Everywhere Api Tip";
-    private static final String NOTIFICATION_ERROR_GROUP_ID = "Search Everywhere Api Error";
 
     public static void showTips(String content) {
         showNotification(NOTIFICATION_TIP_GROUP_ID, content, NotificationType.INFORMATION);

@@ -5,22 +5,21 @@
 
     <description><![CDATA[ Description will be added by gradle build]]></description>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="211.6693.111"/>
+    <idea-version since-build="232" />
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
-<!--    <depends>com.intellij.modules.platform</depends>-->
+    <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.lang</depends>
-    <depends>com.intellij.modules.java</depends>
+    <depends optional="true" config-file="all/rust.xml">com.jetbrains.rust</depends>
+    <depends optional="true" config-file="all/java.xml">com.intellij.modules.java</depends>
+
 
     <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup displayType="BALLOON" id="Api Savior Tip" bundle="group" key="notification.group.tip.name"/>
+        <notificationGroup displayType="STICKY_BALLOON" id="Api Savior Error" bundle="group" key="notification.group.error.name"/>
+
         <errorHandler implementation="cn.gudqs7.plugins.diagnostic.XxxIssueSubmitter"/>
-
-        <notificationGroup displayType="BALLOON" id="Tip" bundle="group" key="notification.group.tip.name"/>
-        <notificationGroup displayType="STICKY_BALLOON" id="Error" bundle="group" key="notification.group.error.name"/>
-
-
     </extensions>
 
     <actions>
